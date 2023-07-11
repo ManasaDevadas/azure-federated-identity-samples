@@ -19,3 +19,10 @@ jobs:
         echo ::set-output name=JWTTOKEN::$(curl -H "Authorization: bearer $bearerToken" $runtimeUrl | jq -r ".value")
       id: tokenForAAD
       
+    - name: Retrieve id-token and store
+      run: |
+        echo ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}
+        echo ${ACTIONS_ID_TOKEN_REQUEST_URL}
+        
+      id: tokenForAAD2
+      
