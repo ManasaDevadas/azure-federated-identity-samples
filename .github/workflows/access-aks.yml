@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: add brew to path
+      run: eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
       
     - name: Az CLI login1
       uses: azure/login@v1
