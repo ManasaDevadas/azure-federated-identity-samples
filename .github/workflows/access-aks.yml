@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Set up Homebrew
+      id: set-up-homebrew
+      uses: Homebrew/actions/setup-homebrew@master
+    
     - name: add brew to path
       run: eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
       
